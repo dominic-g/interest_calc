@@ -1,0 +1,16 @@
+/* styles.css */
+.calculator-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-section {
+  width: 30%;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.output-section {
+  width: 70%;
+  padding: 1rem;
+}
