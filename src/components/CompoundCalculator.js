@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const SimpleCompoundCalculator = () => {
+const CompoundCalculator = () => {
   const [principal, setPrincipal] = useState('');
   const [rate, setRate] = useState('');
   const [time, setTime] = useState('');
@@ -46,4 +46,4 @@ const SimpleCompoundCalculator = () => {
   );
 };
 
-export default SimpleCompoundCalculator;
+export default CompoundCalculator;

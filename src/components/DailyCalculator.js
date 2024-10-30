@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-const DailyForexCalculator = () => {
+const DailyCalculator = () => {
   const [principal, setPrincipal] = useState('');
   const [rate, setRate] = useState('');
   const [days, setDays] = useState('');
@@ -42,4 +42,4 @@ const DailyForexCalculator = () => {
   );
 };
 
-export default DailyForexCalculator;
+export default DailyCalculator;
