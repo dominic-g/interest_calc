@@ -1,4 +1,9 @@
 /* styles.css */
+body{
+  background: #292929;
+  width: 100vw;
+  min-height: 100vh;
+}
 .calculator-page {
   display: flex;
   flex-direction: row;
