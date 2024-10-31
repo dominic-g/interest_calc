@@ -7,8 +7,8 @@ body{
 }
 nav{
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  justify-content: left;
+  margin: 20px 15px;
 }
 nav a{
   background: lightgrey;
@@ -18,8 +18,9 @@ nav a{
   display: flex;
   align-items: center;
   text-align: center;
-  width: 24%;
-  padding: 10px 0;
+  width: max-content;
+  padding: 10px 10px;
+  margin: 0 15px;
   justify-content: center;
   text-decoration: none;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
@@ -48,4 +49,16 @@ hr.mb{
 .output-section {
   width: 70%;
   padding: 1rem;
+}
+
+@media (max-width: 748px){
+  nav{
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  nav a{
+    width: 24%;
+    padding: 10px 0px;
+    margin: 0px;
+  }
 }
