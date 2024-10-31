@@ -15,6 +15,7 @@ function App() {
           <Link to="/daily">Daily Compound</Link>
           <Link to="/forex">Forex Compound</Link>
         </nav>
+        <hr class="mb"/>
         <Routes>
           <Route path="/" element={<SimpleCalculator />} />
           <Route path="/simple" element={<SimpleCalculator />} />

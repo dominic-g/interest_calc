@@ -3,6 +3,36 @@ body{
   background: #292929;
   width: 100vw;
   min-height: 100vh;
+  margin: 0;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+nav a{
+  background: lightgrey;
+  border-color: #aaa;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 24%;
+  padding: 10px 0;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  color: #333;
+}
+nav a:not(.active):hover, nav a:not(.active):active,
+nav a.active{
+  background: #cc6102;
+  color: #fff;
+}
+
+hr.mb{
+  margin-bottom: 30px;
 }
 .calculator-page {
   display: flex;
