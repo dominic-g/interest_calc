@@ -36,19 +36,23 @@ hr.mb{
   margin-bottom: 30px;
 }
 .calculator-page {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 40% auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
+
 .input-section {
-  width: 30%;
   padding: 1rem;
   border-right: 1px solid #ddd;
+  grid-column: 1;
 }
 
 .output-section {
-  width: 70%;
   padding: 1rem;
+  grid-column: 2;
 }
 
 @media (max-width: 748px){
@@ -60,5 +64,16 @@ hr.mb{
     width: 24%;
     padding: 10px 0px;
     margin: 0px;
+  }
+  .calculator-page{
+    grid-template-columns: 100%;
+  }
+  .input-section{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .output-section{
+    grid-column: 1;
+    grid-row: 2;
   }
 }
