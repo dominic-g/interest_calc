@@ -45,14 +45,21 @@ hr.mb{
 
 
 .input-section {
-  padding: 1rem;
   border-right: 1px solid #ddd;
   grid-column: 1;
+  margin: auto;
+  background: #18212c;
+  color: #e3e3e3;
+  border: 1px solid #666;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 .output-section {
-  padding: 1rem;
   grid-column: 2;
+  margin-top: 0;
+  border: 1px solid #444;
+  padding: 0 20px;
 }
 
 @media (max-width: 748px){
