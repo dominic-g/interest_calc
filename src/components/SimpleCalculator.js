@@ -49,8 +49,8 @@ const SimpleCalculator = () => {
             totalInterestEarned={totalInterest}
             initialBalance={principal}
             yearlyRate={rate}
-            compoundedRate={compounded ? (Math.pow(1 + rate / 100, 1) - 1) * 100 : rate}
-            allTimeRateOfReturn={((result - principal) / principal) * 100}
+            compoundedRate={compounded ? ((Math.pow(1 + rate / 100, 1) - 1) * 100).toFixed(2) : rate.toFixed(2)}
+            allTimeRateOfReturn={(((result - principal) / principal) * 100).toFixed(2)}
             timeToDoubleInvestment={compounded ? (72 / rate).toFixed(1) : (100 / rate).toFixed(1)}
             monthlyBreakdown={[]} // Placeholder: pass actual monthly breakdown data
             yearlyBreakdown={[]}  // Placeholder: pass actual yearly breakdown data

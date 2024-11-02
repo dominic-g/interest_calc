@@ -1,4 +1,76 @@
 /* styles.css */
+:root{
+  --background-color: #fff;
+  --masthead-color: #f4f4f4;
+  --masthead-color-gradient: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 55%, rgba(235,235,235,1) 56%, rgba(246,246,246,1) 100%);
+  --footer-color: #f0942d;
+  --footer-color-gradient: linear-gradient(180deg, rgba(204,97,2,1) 0%, rgba(240,148,45,1) 100%);
+  --topmenu-bg: #e6e6e6;
+  --topmenu-dropdown-bg: #544a48;
+  --text-color: #555;
+  --text-color-alt: #666;
+  --h1-color: #666;
+  --h2-color: #f0942d;
+  --h3-color: cadetblue;
+  --h4-color: #333;
+  --form-outer-bg: #f6f6f6;
+  --form-bg: #eee;
+  --form-text: #333;
+  --form-input-bg: #fff;
+  --border-light: #ddd;
+  --border-full-light: 1px solid #ddd;
+  --border-med: #ccc;
+  --border-full-med: 1px solid #ccc;
+  --border-dark: #aaa;
+  --border-full-dark: 1px solid #aaa;
+  --highlight-bg: #f3f3f3;
+  --link-color: #225a89;
+  --link-visited-color: #663300;
+  --link-hover-color: #c30;
+  --link-active-color: #009900;
+  --button-bg: #fff;
+  --button-text: #ee8820;
+  --button-hover: #ee8820;
+  --tcs-green: #6a3;
+  --tcs-orange: orange;
+  --tcs-darkorange: darkorange;
+  --tcs-blue: #20aaee;
+  --tcs-lightblue: lightblue;
+  --tcs-indianred: indianred;
+  --tcs-purple: #bca2f7;
+  --duration: 0.5s;
+  --timing: ease;
+  color-scheme: light dark;
+  --background-color: #292929;
+  --masthead-color: #1f1f1f;
+  --masthead-color-gradient: linear-gradient(180deg, rgba(20,20,20,1) 1%, rgba(31,31,31,1) 100%);
+  --footer-color: #333;
+  --footer-color-gradient: #333;
+  --topmenu-bg: #1f1f1f;
+  --topmenu-dropdown-bg: darkslategrey;
+  --text-color: #e3e3e3;
+  --text-color-alt: #eee;
+  --h1-color: #e3e3e3;
+  --h3-color: deepskyblue;
+  --form-outer-bg: #232323;
+  --form-bg: #18212c;
+  --form-text: #e3e3e3;
+  --form-input-bg: #333;
+  --border-light: #444;
+  --border-full-light: 1px solid #444;
+  --border-med: #666;
+  --border-full-med: 1px solid #666;
+  --border-dark: #aaa;
+  --border-full-dark: 1px solid #aaa;
+  --highlight-bg: #444;
+  --link-color: orange;
+  --link-visited-color: #cc6600;
+  --link-hover-color: yellow;
+  --link-active-color: #009900;
+  --button-bg: #292929;
+  --button-text: #fff;
+  --button-hover: #cc6102;
+}
 body{
   background: #292929;
   width: 100vw;
@@ -60,6 +132,109 @@ hr.mb{
   margin-top: 0;
   border: 1px solid #444;
   padding: 0 20px;
+}
+
+.calculator_results h2{margin-top:0!important;margin-bottom:.5em!important}
+#amortisationTable table caption,div.containerTitle{text-align:left;font-size:16px;margin-bottom:10px;color:var(--h2-color)}
+#amortisationTable table{width:100%;border:1px solid #ccc;border-collapse:collapse}
+#amortisationTable table th,#amortisationTable table td{min-width:40px;max-width:150px;height:20px;padding:5px 10px}
+#monthlyAmortization{display:none}#amortisationTable table tr:nth-child(odd){background:var(--highlight-bg)}
+#amortisationTable table td{border-bottom:1px solid #ccc;text-align:left;font-size:12px;line-height:14px;border-right:1px solid #ddd}
+#amortisationTable table td:last-child{font-weight:700;border-right:none}
+#amortisationTable table th{border-top:1px solid #ccc;border-right:1px solid #ddd;border-bottom:1px solid #ccc;background:#777;color:#fff;padding:8px;font-size:11px;line-height:13px}
+#amortisationTable table th:first-child,#amortisationTable table td:first-child{text-align:center}
+#amortisationTable table th:last-child,#amortisationTable table tr:last-child td:last-child{background:var(--tcs-green)}
+#amortisationTable table th:nth-last-child(2),#amortisationTable table tr:last-child td:nth-last-child(2){background:var(--tcs-darkorange)}
+#amortisationTable table th:nth-last-child(3),#amortisationTable table tr:last-child td:nth-last-child(3){background:var(--tcs-blue)}
+#amortisationTable table th:nth-last-child(3){max-width:70px!important}
+#amortisationTable table tr:last-child td{background:#777;font-weight:700;border-right:1px solid #ddd;color:#fff!important}
+#amortisationTable table tr:last-child>td>.withdrawal{color:#fff!important}
+#amortisationTable table th:last-child,#amortisationTable table tr:last-child td:last-child{border-right:0}
+#monthlyAmortization tr:nth-child(12n+2){background-color:#ffc;font-weight:700;color:#666}
+#monthlyAmortization tr:nth-child(2){background-color:revert;color:revert;font-weight:400}
+#monthlyAmortization tr.compoundInterval td:nth-last-child(2){background-color:#ffe4b5;color:#666}
+#monthlyAmortization tr.compoundInterval td:last-child{background-color:var(--tcs-lightblue)}
+#amortisationTable table th:nth-child(2),#amortisationTable table td:nth-child(2),#amortisationTable table th:nth-child(4),#amortisationTable table td:nth-child(4){display:none}
+#graphToggle svg:hover{fill:inherit!important}
+.wrapper{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:20px;grid-auto-rows:minmax(40px,auto);margin-bottom:20px;font-family:Helvetica,Arial;font-size:18px;line-height:22px}
+.wrapper div{border-top:var(--border-full-light);border-bottom:var(--border-full-light);padding:15px 5px;font-size:13px;line-height:15px}
+.wrapper>div>div{padding:0 0 5px}
+.wrapper>div span.projectionFigure{display:block;color:#bbb;font-size:30px;line-height:1.2;font-weight:700;margin:0 0 10px}
+.wrapper>div span.projectionFigure:last-of-type{margin-bottom:0}
+.wrapper>div span.projectionFigure svg{width:25px;height:25px;position:relative;top:1px;opacity:.8;margin-right:8px}
+.one{grid-column:1;grid-row:1}
+.two{grid-column:2;grid-row:1}
+.three{grid-column:1;grid-row:2}
+.four{grid-column:2;grid-row:2}
+.two #questionMarkHelp{cursor:pointer;width:12px;margin-left:5px;opacity:.6}
+#effectiveFAQ{display:none;font-size:12px;line-height:13px;font-weight:400;opacity:.7;margin-bottom:5px}
+@media only screen and (min-width:1200px){
+  .wrapper>div span.projectionFigure{font-size:32px}
+}
+@media only screen and (min-width:970px){
+  #scrollBackUp{display:none}
+}
+@media only screen and (max-width:580px){
+  #amortisationTable table th,#amortisationTable table td{min-width:20px;max-width:100px;height:20px;padding:5px;font-size:10px;line-height:12px}
+  .calculator_results label{width:inherit;margin-right:0}
+  .wrapper{grid-template-columns:auto;grid-gap:0;margin-bottom:0}
+  .one{grid-column:1;grid-row:1}
+  .two{grid-column:1;grid-row:2;border-top:0!important;margin-bottom:15px}
+  .three{grid-column:1;grid-row:3}
+  .four{grid-column:1;grid-row:4}
+  .wrapper div{padding-left:0;padding-right:0}
+  .wrapper>div span.projectionFigure{font-size:30px}
+}
+#toggleOptions,#breakdownOptions{display:inline-block;vertical-align:top;position:relative;border:var(--border-full-light);border-radius:15px;padding:12px 3px 5px;margin:10px 0}
+#toggleOptions::before{content:"Table / Chart / Summary";font-size:12px;position:absolute;left:0;top:-10px;background:var(--background-color);padding:0 5px;color:var(--text-color-alt)}
+.toggleIcons{position:relative;display:inline-block;vertical-align:top;margin:1px 8px 0;cursor:pointer;fill:var(--border-light);transition-duration:.2s;outline:none;-webkit-tap-highlight-color:transparent}
+.toggleIcons svg{fill:inherit;height:35px}
+#amortisationToggle.highlightIcon,#graphToggle.highlightIcon,#toggleOptions svg:hover{fill:#20aaee}
+#summaryToggle.highlightIcon,#summaryToggle svg:hover{fill:#ff8c00}
+#toggleOptions svg:hover,#summaryToggle svg:hover{transition-duration:.4s}
+#targetToggle.highlightIcon,#targetToggle svg:hover{fill:var(--tcs-green)}
+#breakdownOptions{margin-right:20px;border:0}
+#breakdownOptions::before{content:"Breakdown choice";font-size:12px;position:absolute;left:0;top:-10px;background:var(--background-color);padding:0 5px;color:var(--text-color-alt)}
+#breakdownOptions label{padding:11px}
+#breakdownOptions .radio-switch label{font-size:12px}
+#breakdownOptions:nth-of-type(2) input:checked+label{background-color:#4496bf!important}
+#tipContainer{display:none;margin:20px 0 0}
+#summaryContainer,#targetContainer{display:none;margin:10px 0;font-size:14px;line-height:18px;border-top:var(--border-full-light);border-bottom:var(--border-full-light);padding:15px 0}
+#summaryContainer span{display:inline-block;width:140px;font-weight:700;margin:3px 0}
+#summaryContainer #questionMarkHelp{cursor:pointer;width:14px;height:14px;margin-left:5px;opacity:.6;position:relative;top:2px}
+#graphContainer{margin:10px -10px 15px;display:none}
+.shadowOutline{box-shadow:rgba(149,157,165,.2)0 8px 24px;border:1px solid #eee}
+#waterMarkLogo{width:50px;height:49px;position:relative;float:right;opacity:.5}
+.pulse{transform-origin:50% 50%;animation-duration:1s;animation-name:pulse;animation-iteration-count:1}
+@keyframes pulse{0%{transform:scale(1)}20%{transform:scale(.8)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+.resultCopy{position:relative;float:right;border:none!important;padding:0;min-width:0;right:10px;top:4px;background:0 0;font-size:22px;color:var(--text-color);opacity:.3}
+.resultCopy:hover{opacity:1;color:inherit}
+.resultCopy svg#copyLink{width:22px;height:22px}
+.resultHelpBtn{cursor:pointer;width:16px;height:16px;margin-left:10px;fill:var(--text-color);opacity:.3;position:relative;bottom:3px}
+.resultHelpBtn:hover{opacity:.9;transition-duration:.6s}
+#rorInfo,#apyInfo,#twrInfo,#maxWithdrawalInfo{display:none;opacity:.8;margin-bottom:20px}
+#shareButton,#csvDownloadButton{background:var(--tcs-green);border:1px solid #666;min-width:50px;height:38px;font-family:arial;margin-right:10px;font-size:12px;line-height:14px;vertical-align:top}
+#shareButton:hover,#csvDownloadButton:hover{background:#666;color:#fff}
+#shareIcon{position:relative;top:1px}
+#shareLinkBox{display:none;width:100%;margin-top:15px}
+svg#shareResult,#csvDownloadButton svg{position:relative;bottom:2px}
+#shareButton svg,#csvDownloadButton svg{fill:currentColor;vertical-align:bottom;margin-left:3px;height:15px}
+.startOverBtn{display:inline-block;border:1px solid #666;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;font-size:12px;padding:9px 5px 0;margin-right:10px;transition-duration:.6s;outline:none;min-width:70px;height:27px;background:#20aaee;color:#fff!important;text-decoration:none;text-align:center}
+.startOverBtn:hover{background:#666;border-color:#333}
+#scrollBackUp{position:relative;float:right;top:10px;right:5px;fill:var(--border-light);transition-duration:.2s;outline:none;-webkit-tap-highlight-color:transparent;height:35px}
+#scrollBackUp:hover{fill:var(--border-med)}
+@media only screen and (max-width:580px){
+  #breakdownOptions{margin-left:-2px}
+  #toggleOptions{margin-right:-5px}
+  #toggleOptions svg:hover,#summaryToggle svg:hover{fill:inherit;transition-duration:0s}
+  .toggleIcons{margin:1px 7px 0}
+  .toggleIcons svg{height:33px}
+  #breakdownOptions{margin-right:10px}
+}
+@media print{
+  #questionMarkHelp,#effectiveFAQ,#scrollBackUp{display:none!important}
+  .shadowOutline{box-shadow:0 0;border:0}
+  #heading-full>.authorBox{float:none;margin-bottom:20px}
 }
 
 @media (max-width: 748px){
