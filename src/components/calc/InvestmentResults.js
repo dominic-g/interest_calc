@@ -1,5 +1,35 @@
 import React from 'react';
 
+function changeBreakdown(option) {
+  const yearlyAmortization = document.getElementById("yearlyAmortization");
+  const monthlyAmortization = document.getElementById("monthlyAmortization");
+
+  if (option === 1) {
+    yearlyAmortization.style.display = "none";
+    monthlyAmortization.style.display = "table";
+  } else {
+    monthlyAmortization.style.display = "none";
+    yearlyAmortization.style.display = "table";
+  }
+}
+
+function toggleAmortisation() {
+  const amortisationTable = document.getElementById("amortisationTable");
+  const graphContainer = document.getElementById("graphContainer");
+  const amortisationToggle = document.getElementById("amortisationToggle");
+  const graphToggle = document.getElementById("graphToggle");
+  const showTableInput = document.querySelector('input[name="showTable"]');
+  const showChartInput = document.querySelector('input[name="showChart"]');
+
+  amortisationTable.style.display = "block";
+  graphContainer.style.display = "none";
+  amortisationToggle.classList.add("highlightIcon");
+  graphToggle.classList.remove("highlightIcon");
+
+  if (showTableInput) showTableInput.value = '1';
+  if (showChartInput) showChartInput.value = '0';
+}
+
 const InvestmentResults = ({
   futureInvestmentValue,
   totalInterestEarned,
@@ -103,10 +133,6 @@ const InvestmentResults = ({
           <li>Start investing early.</li>
           <li>Make regular contributions if possible.</li>
           <li>Consider tax-efficient savings products with more frequent compounding.</li>
-          <li>
-            <a href="#what-is" onClick={() => scrollToInfo('what-is')}>What is compound interest?</a> | 
-            <a href="#growth-strategies" onClick={() => scrollToInfo('growth-strategies')}>Making it work for you</a>.
-          </li>
         </ul>
       </div>
 
