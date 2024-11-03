@@ -8,14 +8,14 @@ import ForexCalculator from './components/ForexCalculator';
 function App() {
   return (
     <Router>
-      <div>
+      <div data-theme="dark">
         <nav>
           <Link to="/simple">Simple</Link>
           <Link to="/compound">Compound</Link>
           <Link to="/daily">Daily Compound</Link>
           <Link to="/forex">Forex Compound</Link>
         </nav>
-        <hr class="mb"/>
+        <hr className="mb"/>
         <Routes>
           <Route path="/" element={<SimpleCalculator />} />
           <Route path="/simple" element={<SimpleCalculator />} />
